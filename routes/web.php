@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post(Telegram::getAccessTocken(), function () {
-    Telegram::commandsHandler(true);
+
+Route::post('/bot', function () {
+    $update = Telegram::commandsHandler(true);
 });

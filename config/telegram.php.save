@@ -29,16 +29,16 @@ return [
     |                       'status', // Shared Command Name.
     |                       Acme\Project\Commands\BotFather\HelloCommand::class,
     |                       Acme\Project\Commands\BotFather\ByeCommand::class,
-    |            ]
+    |             ]
     */
     'bots'                         => [
         'mybot' => [
             'username'            => 'Cool_Lashes_Bot',
             'token'               => env('TELEGRAM_BOT_TOKEN', '1247307041:AAGU-gDyH31vu1tHy9STdd_zxIa3CQZJGQQ'),
             'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
-            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', '/bot'),
+            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', 'YOUR-BOT-WEBHOOK-URL'),
             'commands'            => [
-//                  Acme\Project\Commands\MyTelegramBot\BotCommand::class
+                //Acme\Project\Commands\MyTelegramBot\BotCommand::class
             ],
         ],
 
@@ -197,8 +197,8 @@ return [
     |
     */
     'shared_commands'              => [
-// 'start' => Acme\Project\Commands\StartCommand::class,
+        // 'start' => Acme\Project\Commands\StartCommand::class,
         // 'stop' => Acme\Project\Commands\StopCommand::class,
-// 'status' => Acme\Project\Commands\StatusCommand::class,
+        // 'status' => Acme\Project\Commands\StatusCommand::class,
     ],
 ];
