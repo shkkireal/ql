@@ -13,7 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
 
-        '1247307041:*'
-        //
+        '/bot'
+
     ];
 }
