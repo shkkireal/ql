@@ -14,10 +14,6 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
 
         '/bot'
-<<<<<<< HEAD
-       
-=======
 
->>>>>>> 5f034638dfed5b3391d090e7fc5af728b53f09b3
     ];
 }
