@@ -175,6 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Telegram\Bot\Laravel\TelegramServiceProvider::class,
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f034638dfed5b3391d090e7fc5af728b53f09b3
     ],
 
     /*
