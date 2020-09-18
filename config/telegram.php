@@ -117,7 +117,8 @@ return [
     */
     'commands'                     => [
         Telegram\Bot\Commands\HelpCommand::class,
-    ],
+        app\Telegram\TestCommand::class,
+        ],
 
     /*
     |--------------------------------------------------------------------------
