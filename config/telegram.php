@@ -115,10 +115,11 @@ return [
     | will respond with a list of available commands and description.
     |
     */
-    'commands'                     => [   
+    'commands'                     => [
       Telegram\Bot\Commands\HelpCommand::class,
       App\Telegram\TestCommand::class,
- 
+        App\Telegram\SiginCommand::class,
+
         ],
 
     /*
