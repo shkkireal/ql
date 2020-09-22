@@ -38,7 +38,7 @@ return [
             'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR-CERTIFICATE-PATH'),
             'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', '/bot'),
             'commands'            => [
-//                  Acme\Project\Commands\MyTelegramBot\BotCommand::class
+      //     App\Telegram\TestCommand::class,
             ],
         ],
 
@@ -115,9 +115,10 @@ return [
     | will respond with a list of available commands and description.
     |
     */
-    'commands'                     => [
-        Telegram\Bot\Commands\HelpCommand::class,
-        app\Telegram\TestCommand::class,
+    'commands'                     => [   
+      Telegram\Bot\Commands\HelpCommand::class,
+      App\Telegram\TestCommand::class,
+ 
         ],
 
     /*
@@ -132,8 +133,7 @@ return [
     | 1. Group using full path to command classes.
     | 2. Group using shared commands: Provide the key name of the shared command
     | and the system will automatically resolve to the appropriate command.
-    | 3. Group using other groups of commands: You can create a group which uses other
-    | groups of commands to bundle them into one group.
+    | 3. Group using other groups of commands: You can create a group which uses other    | groups of commands to bundle them into one group.
     | 4. You can create a group with a combination of 1, 2 and 3 all together in one group.
     |
     | Examples shown below are by the group type for you to understand each of them.
@@ -198,8 +198,9 @@ return [
     |
     */
     'shared_commands'              => [
-// 'start' => Acme\Project\Commands\StartCommand::class,
+ 'start' => App\Telegram\TestCommand::class,
+
         // 'stop' => Acme\Project\Commands\StopCommand::class,
-// 'status' => Acme\Project\Commands\StatusCommand::class,
+ 'test' => App\Telegram\TestCommand::class,
     ],
 ];
