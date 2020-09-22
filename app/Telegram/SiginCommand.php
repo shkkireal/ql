@@ -42,13 +42,15 @@ class SiginCommand extends Command
             ['0']
         ];
 
-        $reply_markup = Telegram::replyKeyboardMarkup([
+        $reply_markup = \Keyboard::make([
             'keyboard' => $keyboard,
             'resize_keyboard' => true,
             'one_time_keyboard' => true
         ]);
 
-        $response = Telegram::sendMessage([
+
+
+        $response = \Telegram::sendMessage([
             'chat_id' => 'CHAT_ID',
             'text' => 'Hello World',
             'reply_markup' => $reply_markup
