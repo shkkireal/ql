@@ -4,7 +4,7 @@ namespace App\Telegram;
 
 use Telegram\Bot\Actions;
 use Telegram\Bot\Commands\Command;
-
+use Telegram\Bot\Keyboard\Keyboard;
 
 
 /**
@@ -42,7 +42,7 @@ class SiginCommand extends Command
             ['0']
         ];
 
-        $reply_markup = \Keyboard::make([
+        $reply_markup = Keyboard::make([
             'keyboard' => $keyboard,
             'resize_keyboard' => true,
             'one_time_keyboard' => true
@@ -51,7 +51,7 @@ class SiginCommand extends Command
 
 
         $response = \Telegram::sendMessage([
-            'chat_id' => 'CHAT_ID',
+            'chat_id' => $telegram_user['from']['id'],
             'text' => 'Hello World',
             'reply_markup' => $reply_markup
         ]);
