@@ -17,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('/bot', function () {
-    $update = Telegram::commandsHandler(true);
+
+    Route::group(['middleware' => 'TextBotMiddleware'], function ()
+    {
+        $update = Telegram::commandsHandler(true);
+
+
+    });
 });
 
+Route::get('/', 'BordController@index');
