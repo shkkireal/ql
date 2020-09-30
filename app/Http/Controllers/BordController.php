@@ -12,6 +12,6 @@ class BordController extends Controller
 
 
         Redis::get('post', $this->last);
-        return view('welcome', $data=[$last]);
+        return view('welcome');
     }
 }

@@ -25,4 +25,4 @@ Route::post('/bot', function () {
     })->middleware('TextBotMiddleware');
 
 
-Route::get('/', 'BordController');
+Route::get('/', 'BordController@index');
