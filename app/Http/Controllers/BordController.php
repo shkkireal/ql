@@ -8,6 +8,8 @@ class BordController extends Controller
 {
     public function index(){
 
-        return "1";
+
+        Redis::get('post', $this->last);
+        return view::welcome($this->last);
     }
 }
