@@ -8,7 +8,7 @@ class BordController extends Controller
 {
      public $last;
 
-    public function index($last){
+    public function index(){
 
 
         Redis::get('post', $this->last);
