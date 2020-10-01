@@ -15,7 +15,7 @@ class TextBotMiddleware
      */
     public function handle($request, Closure $next)
     {
-        Redis::set('post', $request);
+
 
         return $next($request);
     }
