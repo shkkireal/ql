@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Telegram\Bot\Actions;
 use Telegram\Bot\Commands\Command;
 use Illuminate\Http\Request;
@@ -19,7 +20,7 @@ class BordController extends Controller
     public function updatetelegrame(){
 
 
-        $updates = Telegram::getWebhookUpdates();
+        $updates = \Telegram::getWebhookUpdates();
         $telegram_user = \Telegram::getWebhookUpdates()['message'];
         $text = sprintf('%s: %s'.PHP_EOL,  'Ваш номер чата - ' , $telegram_user['from']['id']);
         $text .= sprintf('%s: %s'.PHP_EOL, 'Ваше имя - ' , $telegram_user['from']['username']);
