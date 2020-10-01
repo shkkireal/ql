@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('/bot', function () {
-
-    $updates = Telegram::getWebhookUpdates();
-//    $update = Telegram::commandsHandler(true);
-});
-    //->middleware('TextBotMiddleware');
+Route::post('/bot', 'BordController@updatetelegrame');
+    
 
