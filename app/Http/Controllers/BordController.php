@@ -18,7 +18,7 @@ class BordController extends Controller
     public function updatetelegrame(){
 
 
-        $this->updateanswer();
+     return $this->updateanswer();
 
     }
 
