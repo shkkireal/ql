@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::post('/bot', 'BordController@updatetelegrame');
 
 
-Route::get('/', 'HomeController@index' )->name('home');
+Route::get('/', 'HomeController@index' );
